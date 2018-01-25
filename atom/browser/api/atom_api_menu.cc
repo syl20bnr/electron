@@ -72,6 +72,7 @@ void Menu::ExecuteCommand(int command_id, int flags) {
 }
 
 void Menu::MenuWillShow(ui::SimpleMenuModel* source) {
+  printf("HI\n");
   menu_will_show_.Run();
 }
 
@@ -151,6 +152,10 @@ bool Menu::IsEnabledAt(int index) const {
 
 bool Menu::IsVisibleAt(int index) const {
   return model_->IsVisibleAt(index);
+}
+
+void Menu::MenuWillClose() {
+  Emit("menu-will-close");
 }
 
 // static

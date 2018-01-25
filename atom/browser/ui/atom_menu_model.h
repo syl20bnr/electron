@@ -36,6 +36,9 @@ class AtomMenuModel : public ui::SimpleMenuModel {
    public:
     virtual ~Observer() {}
 
+    // // notifies the menu is about to be shown
+    // virtual void MenuWillShow() {}
+
     // Notifies the menu has been closed.
     virtual void MenuWillClose() {}
   };
